@@ -19,11 +19,11 @@ int main(void)
 	if (n < 0)
 	{
 		if (n == 0)
-		printf("Zero");
-	else
-		printf("Negative");
+			printf("Zero");
+		else
+			printf("Negative");
 	}
-	else
-		printf("Positive");
+		else
+			printf("Positive");
 	return (0);
 }
