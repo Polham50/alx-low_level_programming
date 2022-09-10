@@ -11,7 +11,6 @@ int main(void)
 	printf("Print all uppercase letters followed :\n");
 for (ch = 'A'; ch <= 'Z'; ch++)
 		putchar (ch);
-putchar ('\n');
 for (ch = 'a'; ch <= 'z'; ch++)
 		putchar (ch);
 putchar ('\n');
