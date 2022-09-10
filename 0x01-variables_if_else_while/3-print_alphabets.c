@@ -9,10 +9,9 @@ int main(void)
 	int ch;
 
 	printf("Print all uppercase letters followed :\n");
-for (ch = 'A'; ch <= 'Z'; ch++)
+	for (ch = 'A'; ch <= 'Z'; ch++)
 		putchar (ch);
-for (ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar (ch);
-putchar ('\n');
 	return (0);
 }
