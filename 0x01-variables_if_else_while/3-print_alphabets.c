@@ -7,8 +7,8 @@
 int main(void)
 {
 	int ch;
-	
-	printf("Print all uppercase letters followed :\n");
+
+	printf("Print all uppercase letters followed :\n", ch);
 	for (ch = 'A'; ch <= 'Z'; ch++)
 		putchar ('\n');
 	putchar ('\n');
