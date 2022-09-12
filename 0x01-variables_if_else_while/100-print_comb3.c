@@ -28,6 +28,7 @@ int main(void)
 				{
 					putchar (',');
 				}
+			}
 			j++;
 		}
 		j = '0';
