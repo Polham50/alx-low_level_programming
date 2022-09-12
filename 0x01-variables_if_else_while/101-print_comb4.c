@@ -16,14 +16,14 @@ int main(void)
 	{
 		while (j <= '8')
 		{
-			while (l <= '9')
+			while (k <= '9')
 			{
 				if (i < j && j < k)
 				{
 					putchar(i);
 					putchar(j);
 					putchar(k);
-					if (!(! == '7' && j == '8' && k == '9'))
+					if (!(i == '7' && j == '8' && k == '9'))
 					{
 						putchar(',');
 						putchar(' ');
