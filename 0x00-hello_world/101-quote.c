@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <unistd.h>
+
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description: Prints out the last part
+ * Description: Prints out
  *
  * Return: Always 1 (success)
  */
