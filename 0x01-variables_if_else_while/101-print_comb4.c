@@ -17,6 +17,7 @@ int main(void)
 		while (j <= '8')
 		{
 			while (k <= '9')
+			{
 				if (i< j && j < k)
 				{
 					putchar(i);
@@ -26,10 +27,11 @@ int main(void)
 					{	
 						putchar(',');
 						putchar(' ');
-					}
-					k++;
+					{
 				}
-				k = '0';
+				k++;
+			}
+			k = '0';
 				j++;
 		}
 		j = '0';
