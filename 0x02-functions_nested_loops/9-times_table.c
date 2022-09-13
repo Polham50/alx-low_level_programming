@@ -23,9 +23,9 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar('main.h)"
-			}	
-			_putchar((d % 10) + '0')
+				_putchar(' ');
+			}
+			_putchar((d % 10) + '0');
 
 			if (cone < 9)
 			{
@@ -35,5 +35,5 @@ void times_table(void)
 		}
 		_putchar('\n');
 	}
-}
 
+}
