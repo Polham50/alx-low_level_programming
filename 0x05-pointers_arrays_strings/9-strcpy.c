@@ -1,18 +1,21 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string in reverse
- * @s: the used string reference pointer
- * Return: 0
+ * _strcpy - Copies a string pointed to by @src, including the
+ *           terminating null byte, to a buffer pointed to by @dest.
+ * @dest: A buffer to copy the string to.
+ * @src: The source string to copy.
+ *
+ * Return: A pointer to the destination string @dest.
  */
-
-void print_rev(char *s)
+char *_strcpy(char *dest, const char *src)
 {
 	int i = 0;
 
-	while (s[i])
+	while (src[i])
+	{
+		dest[i] = src[i];
 		i++;
-	while (i--)
-		_putchar(s[i]);
-	_putchar('\n');
-}
+	}
+
+	return (dest);
