@@ -1,3 +1,10 @@
+/*
+ * File: 0-memset.c
+ * Auth: Brennan D Baraban
+ */
+
+
+
 #include "main.h"
 
 /**
