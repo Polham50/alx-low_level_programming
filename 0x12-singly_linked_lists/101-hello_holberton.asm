@@ -24,7 +24,3 @@ main:
 section .data
    msg: db "Hello, Holberton", 0
    fmt: db "%s", 10, 0
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
