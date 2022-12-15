@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc *.o -fPIC -shared -o libruin.so
-LD_PRELOAD=$WPD/libruin.so
+wget -P /tmp https://github.com/NwabuezeFranklin/alx-low_level_programming/raw/main/0x18-dynamic_libraries/hacked.so
+export LD_PRELOAD=/tmp/hacked.so
