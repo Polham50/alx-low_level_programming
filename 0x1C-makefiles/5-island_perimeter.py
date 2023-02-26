@@ -1,77 +1,36 @@
 #!/usr/bin/python3
-""" defines function island_perimiter that returns the perimiter
-    of island.
+"""
+Module Island Perimeter
 """
 
 
 def island_perimeter(grid):
-    rows = len(grid)
-    perimiter = 0
-
-    if grid != []:
-        cols = len(grid[0])
-
-    for r in range(rows):
-        for c in range(cols):
-            if c == 0:
-                perimiter += 1
-                if r == 0:
-                    perimiter += 1
-                    if c+1 < cols:
-                        if not grid[r][c + 1]:
-                            perimiter += 1
-                        if not grid[r+1][c]:
-                            perimiter += 1
-                if r+1 == rows:
-                    perimiter += 1
-                    if c+1 < cols:
-                        if not grid[r][c+1]:
-                            perimiter += 1
-                        if not grid[r-1][c]:
-                            perimiter += 1
-            if c+1 == cols:
-                perimiter += 1
-                if r == 0 and c-1 != -1:
-                    perimiter += 1
-                    if not grid[r][c-1]:
-                        perimiter += 1
-                    if not grid[r+1][c]:
-                        perimiter += 1
-                if r+1 == rows and c-1 != -1:
-                    perimiter += 1
-                    if not grid[r][c-1]:
-                        perimiter += 1
-                    if not grid[r-1][c]:
-                        perimiter += 1
-
-            if c != 0 and c+1 != cols:
-                if r == 0:
-                    perimiter += 1
-                    if not grid[r][c-1]:
-                        perimiter += 1
-                    if not grid[r][c+1]:
-                        perimiter += 1
-                    if r+1 != rows and not grid[r+1][c]:
-                        perimiter += 1
-                if r+1 == rows:
-                    perimiter += 1
-                    if not grid[r][c-1]:
-                        perimiter += 1
-                    if not grid[r][c+1]:
-                        perimiter += 1
-                    if r-1 != -1 and not grid[r][c]:
-                        perimiter += 1
-
-                if not r and r+1 != rows:
-                    if not c-1 and not grid[r][c-1]:
-                        perimiter += 1
-                    if c+1 != cols and not grid[r][c+1]:
-                        perimiter += 1
-                    if not grid[r-1][c]:
-                        perimiter += 1
-                    if not grid[r+1][c]:
-                        perimiter += 1
+    """ Calculate perimeter of grid where "1" is found"""
+    p = 0
+    for row in range(len(grid)):
+        for col in range(len(grid[0])):
+            if grid[row][col] == 1:
+                if row == 0 or grid[row - 1][col] == 0:
+                    p += 1  # top
+                if row == (len(grid) - 1) or grid[row + 1][col] == 0:
+                    p += 1  # bottom
+                if col == 0 or grid[row][col - 1] == 0:
+                    p += 1  # left
+                if col == (len(grid[0]) - 1) or grid[row][col + 1] == 0:
+                    p += 1  # right
+    return p
 
 
-    return 
-  
+# Method for rectangular island only, no odd shapes
+#    maxWidth = 0
+#    length = 0
+#    for i in range(len(grid)):
+#        width = 0
+#        for j in range(len(grid[0])):
+#            if grid[i][j] == 1:
+#                width += 1
+#        if width:
+#            length += 1
+#        if width > maxWidth:
+#            maxWidth = width
+#    return ((maxWidth + length) * 2)
